@@ -1,0 +1,40 @@
+kw1
+
+SELECT
+`id`,
+`nazwa`,
+`opis`,
+`cena`
+FROM
+`podzespoly`
+WHERE
+`cena` <'1000'
+
+kw2
+
+SELECT
+`nazwa`,
+`opis`
+FROM
+`podzespoly`
+WHERE
+`producenci_id`='1'
+
+kw3
+
+SELECT
+`podzespoly`.`nazwa` AS 'nazwa_podzespołu',
+`producenci`.`nazwa`  AS 'nazwa_producenta'
+FROM
+`podzespoly`,`producenci`
+WHERE
+`podzespoly`.`producenci_id`=`producenci`.`id`
+
+kw4
+
+UPDATE 
+`producenci` 
+SET 
+`nazwa` = 'PATRIOT' 
+WHERE 
+`producenci`.`id` = 8
